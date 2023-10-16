@@ -1,18 +1,18 @@
 # Promise
 
-Imagine that you're a top singer, and fans ask day and night for your upcoming single.
+মনে করুন আপনি একজন উঁচু স্তরের গায়ক, এবং আপনার ভক্তরা দিন রাত আপনার কাছে নতুন গানের জন্য আবদার করছে।
 
-To get some relief, you promise to send it to them when it's published. You give your fans a list. They can fill in their email addresses, so that when the song becomes available, all subscribed parties instantly receive it. And even if something goes very wrong, say, a fire in the studio, so that you can't publish the song, they will still be notified.
+কিছুটা নিস্তার পাবার জন্য, আপনি তাদেরকে প্রতিস্রুতি দিলেন যে, যখনি গানটি প্রস্তুত হবে তখনি তাদের কাছে আপনি গানটি পাঠিয়ে দেবেন। আপনি আপনার ভক্তদের একটি লিস্ট দিলেন। তারা সেখানে তাদের ইমেইল এড্রেস পূরণ করে দিল, যাতে করে যখনি গানটা প্রস্তুত হবে, লিস্টে সাবস্ক্রাইব করে থাকে সকলেই যেন সাথে সাথে গানটি পেয়ে যায়। এবং যদি অনেক খারাপ কোন ঘটনা ঘটে, ধরুন, আপনার স্টুডিও তে আগুন লেগে গেল, যার কারণে আপনি গানটি প্রস্তুত করতে পারলেন না, লিস্টের সাবস্ক্রাইবাররা সেটার খবরও পেয়ে যাবে।
 
-Everyone is happy: you, because the people don't crowd you anymore, and fans, because they won't miss the single.
+এতে করে সবাই সবাই খুশিঃ আপনি, কারণ আপনার ভক্তরা আপনাকে আর বিরক্ত করবেনা, এবং আপনার ভক্তরা, কারণ তারা গানটির প্রস্তুত হলেই পেয়ে যাবে।
 
-This is a real-life analogy for things we often have in programming:
+প্রোগ্রামিং এর কিছু জিনিস এর বাস্তব উপমা (analogy) এটিঃ
 
-1. A "producing code" that does something and takes time. For instance, some code that loads the data over a network. That's a "singer".
-2. A "consuming code" that wants the result of the "producing code" once it's ready. Many functions  may need that result. These are the "fans".
-3. A *promise* is a special JavaScript object that links the "producing code" and the "consuming code" together. In terms of our analogy: this is the "subscription list". The "producing code" takes whatever time it needs to produce the promised result, and the "promise" makes that result available to all of the subscribed code when it's ready.
+1. একটি "উৎপাদনশীল কোড" (producing code) যা কোন কাজ করতে প্রয়োজনমত সময় নেয়। উদাহরণস্বরূপ, কিছু কোড যা নেটওয়ার্ক এর মাধ্যমে কোন ডাটা নিয়ে আসে। এটি হচ্ছে "গায়ক"।
+2. একটি "গ্রাসকারী/ব্যবহারকারী কোড" (consuming code) যেটি "উৎপাদনশীল কোড" এর কাজ শেষ হওয়ার পর যে উত্তর তৈরী হচ্ছে সেটির জন্য অপেক্ষা করে বা চায়। অনেক ফাংশনেরই এই উত্তরের প্রয়োজন হতে পারে। এরা হচ্ছে "ভক্তরা"।
+3. জাভাস্ক্রিপ্ট এর একটি বিশেষ অবজেক্ট *promise*, যা "উৎপাদনশীল কোড" এবং "গ্রাসকারী/ব্যবহারকারী কোড" এর সংযোগ ঘটায়। আমাদের উপমার ক্ষেত্রেঃ এটি হচ্ছে "সাবস্ক্রাইবার লিস্ট"। "উৎপাদনশীল কোড" তার কাজ সম্পন্ন করতে এবং উত্তর উৎপাদন করতে প্রয়োজন মত সময় নেয় এবং সেই উত্তরটি যখন প্রস্তুত হয়, তখন "promise" এই "উৎপাদনশীল কোড" এর সকল "গ্রাসকারী/ব্যবহারকারী কোড" এর কাছে উত্তরটিকে পাঠিয়ে দেয় বা সহজলভ্য করে তোলে।
 
-The analogy isn't terribly accurate, because JavaScript promises are more complex than a simple subscription list: they have additional features and limitations. But it's fine to begin with.
+আমাদের উপমাটি একদম পুরোপুরি সঠিক নয়, কারণ জাভাস্ক্রিপ্টের promise সমূহ একটি সাধারণ সাবস্ক্রাইবার লিস্ট থেকে অনেক জটিলঃ এদের আরো অনেক বৈশিষ্ট্য এবং অসুবিধাও আছে। কিন্তু আপাতত শুরু করার জন্য উপমাটি ব্যবহারযোগ্য।
 
 The constructor syntax for a promise object is:
 
